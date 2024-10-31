@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Lista de produtos -->
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-label>{{ item.name }} ({{ item.quantity }})</ion-label>
+      <ion-button fill="clear" (click)="editItem(item)">Editar</ion-button>
+      <ion-button fill="clear" (click)="removeItem(item.id)">Remover</ion-button>
+    </ion-item>       
+  </ion-list>
+
+  <!-- Botão para adicionar os novos produtos -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/add-product">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

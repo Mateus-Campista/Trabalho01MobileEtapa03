@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]="newItemName" placeholder="Nome do produto"></ion-input>
+    <ion-input type="number" [(ngModel)]="newItemQuantity" placeholder="Quantidade"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="addItem()">Adicionar</ion-button>
+  <ion-button expand="full" color="light" routerLink="/home">Cancelar</ion-button>
+</ion-content>
